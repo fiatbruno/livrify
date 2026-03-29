@@ -86,6 +86,12 @@ export const sampleBooks = [
   },
 ];
 
+export const libraryHeroSteps = [
+  { n: 1, title: "Upload PDF", desc: "Add your book file" },
+  { n: 2, title: "AI Processing", desc: "We analyze the content" },
+  { n: 3, title: "Voice Chat", desc: "Discuss with AI" },
+];
+
 // File validation helpers
 export const MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB
 export const ACCEPTED_PDF_TYPES = ["application/pdf"];
