@@ -20,7 +20,7 @@ const monaSans = Mona_Sans({
 
 export const metadata: Metadata = {
   title: "Livrify",
-  description: "No need to ready a book anymore, just chat to it.",
+  description: "No need to read a book anymore, just chat to it.",
 };
 
 export default function RootLayout({
