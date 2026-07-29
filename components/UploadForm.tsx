@@ -21,6 +21,7 @@ import {
   voiceIds,
 } from "@/lib/zod";
 import { cn } from "@/lib/utils";
+import { useAuth } from "@clerk/nextjs";
 
 const MALE_VOICES: { id: VoiceId; name: string; description: string }[] = [
   {
@@ -56,6 +57,8 @@ const FEMALE_VOICES: { id: VoiceId; name: string; description: string }[] = [
 const dropzoneBorder = "border-2 border-dashed border-[var(--border-subtle)]";
 
 const UploadForm = () => {
+  const { userId } = useAuth();
+
   const form = useForm<UploadFormValues>({
     resolver: zodResolver(UploadSchema),
     defaultValues: {
