@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { Control, FieldPath, FieldValues } from "react-hook-form";
 import { LucideIcon } from "lucide-react";
 import z from "zod";
-import { UploadSchema } from "@/lib/zod";
+import { Upload  } from "@/lib/zod";
 
 // ============================================
 // DATABASE MODELS
