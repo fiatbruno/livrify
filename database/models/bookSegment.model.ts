@@ -18,6 +18,8 @@ const BookSegmentSchema = new Schema<IBookSegment>(
   { timestamps: true },
 );
 
+
+//These 3 lines are crucial to our application, streamlines how LLMs go over larger PDFs and files.
 BookSegmentSchema.index({ bookId: 1, segmentIndex: 1 }, { unique: true });
 BookSegmentSchema.index({ bookId: 1, pageNumber: 1 });
 
