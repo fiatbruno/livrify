@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ImageIcon, Upload, X } from "lucide-react";
 import { useForm } from "react-hook-form";
+import {toast} from "sonner";
 
 import LoadingOverlay from "@/components/LoadingOverlay";
 import {
@@ -71,6 +72,10 @@ const UploadForm = () => {
   });
 
   const onSubmit = async (data: UploadFormValues) => {
+    if(!userId){
+      return toast.error("Please login to upload books");
+    }
+
     await new Promise((resolve) => setTimeout(resolve, 1200));
     console.log("upload", {
       title: data.title,
