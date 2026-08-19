@@ -15,12 +15,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import {
-  UploadSchema,
-  type UploadFormValues,
-  type VoiceId,
-  voiceIds,
-} from "@/lib/zod";
+import { UploadSchema, type VoiceId, voiceIds } from "@/lib/zod";
+import { z } from "zod";
+
+type UploadFormValues = z.infer<typeof UploadSchema>;
 import { cn } from "@/lib/utils";
 import { useAuth } from "@clerk/nextjs";
 
