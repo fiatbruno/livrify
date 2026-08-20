@@ -73,6 +73,9 @@ const UploadForm = () => {
     if(!userId){
       return toast.error("Please login to upload books");
     }
+    form.formState.isSubmitting = true;
+
+    // PostHog -> track book upload
 
     await new Promise((resolve) => setTimeout(resolve, 1200));
     console.log("upload", {

@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { Control, FieldPath, FieldValues } from "react-hook-form";
 import { LucideIcon } from "lucide-react";
 import z from "zod";
-import { Upload  } from "@/lib/zod";
+import { UploadSchema } from "@/lib/zod";
 
 // ============================================
 // DATABASE MODELS
@@ -15,7 +15,7 @@ export interface IBook extends Document {
   title: string;
   slug: string;
   author: string;
-  persona?: string;
+  voice?: string;
   fileURL: string;
   fileBlobKey: string;
   coverURL: string;
